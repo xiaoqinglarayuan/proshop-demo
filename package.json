@@ -23,11 +23,13 @@
     "data:destroy": "node backend/seeder.js -d"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
     "axios": "^1.13.6",
     "bcryptjs": "^3.0.3",
     "colors": "^1.4.0",
     "express": "^5.2.1",
-    "mongoose": "^9.3.0"
+    "mongoose": "^9.3.0",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "concurrently": "^9.2.1",
