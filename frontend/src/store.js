@@ -1,15 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { createSlice } from "@reduxjs/toolkit";
-const placeholderSlice = createSlice({
-  name: "placeholder",
-  initialState: {},
-  reducers: {},
-});
+import { apiSlice } from "./slices/apiSlice";
 
 const store = configureStore({
   reducer: {
-    placeholder: placeholderSlice.reducer,
+    [apiSlice.reducerPath]: apiSlice.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(apiSlice.middleware),
+  devTools: true,
 });
 
 export default store;
