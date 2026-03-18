@@ -7,7 +7,7 @@ import Paginate from "../components/Paginate";
 import { Link } from "react-router-dom";
 import ProductCarousel from "../components/ProductCarousel";
 import { useGetProductsQuery } from "../slices/productsApiSlice";
-
+import Meta from "../components/Meta";
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
   const { data, isLoading, error } = useGetProductsQuery({
